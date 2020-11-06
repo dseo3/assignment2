@@ -1,0 +1,48 @@
+@media only screen and (max-width: 2000px) {
+    .container {
+        justify-content:center;
+    }  
+    
+    body {
+    background:blue;
+  }
+
+  h1 {
+    text-decoration: underline;
+    margin: 20px 50px;
+    padding: 0 20px;
+    min-height: 75px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    flex-wrap: nowrap;
+    border-radius: 4px;
+  }
+
+  h2 {
+    margin: 20px 50px;
+    padding: 0 20px;
+    min-height: 75px;
+    color: white;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    flex-wrap: nowrap;
+    border-radius: 4px;
+  }
+ 
+  #grad {
+    background-image: linear-gradient(orange, yellow);
+  }
+  
+  
