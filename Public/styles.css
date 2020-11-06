@@ -46,3 +46,7 @@
   }
   
   
+  .textinput {
+    align-items: center;
+    justify-content: center;
+  }

@@ -1,4 +1,4 @@
-function range(int) {
+  function range(int) {
     const arr = [];
     for (let i = 0; i < int; i += 1) {
       arr.push(i);
@@ -15,14 +15,13 @@ function range(int) {
     return 0;
   }
   
-  const orderedList = document.createElement('ol');
-  orderedList.className = "flex-inner";
-  $("form").prepend(orderedList);
-  
-  
-  document.body.addEventListener('submit', async (e) => {
-    e.preventDefault(); // this stops whatever the browser wanted to do itself.
-    const form = $(e.target).serializeArray(); // here we're using jQuery to serialize the form
+  const search = document.querySelector('.search')
+  const unorderedList = document.createElement('ul');
+  const results = [];
+
+  search.addEventListener('input', async (e) => {
+    e.preventDefault();
+    const form = $(e.target).serializeArray();
     fetch('/api', {
       method: 'POST',
       headers: {
@@ -33,48 +32,27 @@ function range(int) {
       .then((fromServer) => fromServer.json())
       .then((fromServer) => {
       
-    
-      const countryNames = fromServer.map(fName => fName.name);
-      const countryCode = fromServer.map(fCode=> fCode.code);
-      
-      const randomCountries = [];
-      const randomCountriesCode = [];
-  
-      for(i = 0; i < 10; i++){
-        const random = Math.floor(Math.random() * countryNames.length); 
-        randomCountries.push(countryNames[random]);
-        randomCountriesCode.push(countryCode[random]);
-      }
-  
-  
-      randomCountries.sort().reverse();
-      randomCountriesCode.sort().reverse();
-  
-      console.log(randomCountries);
-  
-      //Resetting the ordered list so that I can generate a new list every time 
-      $(orderedList).empty();
-    
-  
-      for(i=randomCountries.length-1; i>=0; i--){
-        const list = document.createElement('li');
-      
-        $("ol").prepend(list);
-  
-        let cBox = document.createElement("INPUT");
-        cBox.type = 'checkbox';
-        cBox.name = 'myCheckbox';
-        cBox.value = randomCountriesCode[i];
+        const search = document.querySelector(".search").value;
+        const inputBox = document.querySelector(".box");
+        const ul = document.createElement("ul");
+        const li = document.createElement("li");
         
-        list.prepend(cBox);
-     
-        label = document.createElement('label');
-        list.append(label);
+        //console.log(fromServer);
         
-        label.prepend(randomCountries[i]);
-    
-      }
+        this.results = [];
+
+        //Getting Corresponding Restaurant Name 
+        for(var i = 0; i < fromServer.length; i++){
+          if(( fromServer[i].category.toLowerCase() ) == (search.toLowerCase())) {
+            results.push(fromServer[i].name)
+          }
+        };
         
-    })
-      .catch((err) => console.log(err));
+        inputBox.prepend(results)
+        console.log(results);
+
+  })
+  .catch((err) => console.log(err));
   });
+
+
