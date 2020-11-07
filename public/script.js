@@ -24,7 +24,7 @@
         }
        
         for(var i = 0; i < fromServer.length; i++){
-          if(( fromServer[i].category.toLowerCase().startsWith(search.toLowerCase()))) {
+          if(search != "" && ( fromServer[i].category.toLowerCase().startsWith(search.toLowerCase()))) {
             this.results.push(fromServer[i]);
           }
         };
