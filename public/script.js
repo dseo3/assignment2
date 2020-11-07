@@ -1,23 +1,6 @@
-  function range(int) {
-    const arr = [];
-    for (let i = 0; i < int; i += 1) {
-      arr.push(i);
-    }
-    return arr;
-  }
-  
-  function sortFunction(a, b, key) {
-    if (a[key] < b[key]) {
-      return -1;
-    } if (a[key] > b[key]) {
-      return 1;
-    }
-    return 0;
-  }
-  
   const search = document.querySelector('.search')
   const unorderedList = document.createElement('ul');
-  const results = [];
+  let results = [];
 
   search.addEventListener('input', async (e) => {
     e.preventDefault();
@@ -31,28 +14,31 @@
     })
       .then((fromServer) => fromServer.json())
       .then((fromServer) => {
-      
         const search = document.querySelector(".search").value;
-        const inputBox = document.querySelector(".box");
         const ul = document.createElement("ul");
-        const li = document.createElement("li");
-        
-        //console.log(fromServer);
-        
+                
         this.results = [];
-
-        //Getting Corresponding Restaurant Name 
+        var div = document.getElementById('myItemList');
+        while(div.firstChild){
+            div.removeChild(div.firstChild);
+        }
+       
         for(var i = 0; i < fromServer.length; i++){
-          if(( fromServer[i].category.toLowerCase() ) == (search.toLowerCase())) {
-            results.push(fromServer[i].name)
+          if(( fromServer[i].category.toLowerCase().startsWith(search.toLowerCase()))) {
+            this.results.push(fromServer[i]);
           }
         };
         
-        inputBox.prepend(results)
-        console.log(results);
-
+        document.getElementById('myItemList').appendChild(ul);
+        
+        this.results.forEach(function (item) {
+            let name = document.createElement('li');
+            ul.appendChild(name);
+            name.innerHTML += item.name + "<br />" + item.category + "<br />" + item.address_line_1 + "<br />" + item.city + "<br />" + item.zip;
+        });
   })
   .catch((err) => console.log(err));
   });
 
 
+  
