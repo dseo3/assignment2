@@ -1,51 +1,47 @@
 @media only screen and (max-width: 2000px) {
-    .container {
-        justify-content:center;
-    } 
-}
     
-    body {
-    background:blue;
+}
+  .container {
+    justify-content:center;
+    background:rgb(44, 44, 249);
+  }
+  
+  .wrapper {
+    font-family: 'Grandstander';
+    margin: 20px 50px;
+    padding: 0 20px;
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-radius: 4px;
   }
 
   h1 {
     text-decoration: underline;
-    margin: 20px 50px;
-    padding: 0 20px;
-    min-height: 75px;
-    background-color: blue;
     color: white;
-    display: flex;
-    
     align-items: center;
-    justify-content: center;
     font-weight: bold;
     font-size: 1.5em;
     text-transform: capitalize;
-    flex-wrap: nowrap;
-    border-radius: 4px;
   }
 
-  h2 {
-    margin: 20px 50px;
-    padding: 0 20px;
-    min-height: 75px;
-    color: white;
-    display: flex;
-    
+  body .search{
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 1.5em;
+  }
+
+  body .search-box{
+    width: 40%; 
+    align-items: center;
     text-transform: capitalize;
-    flex-wrap: nowrap;
-    border-radius: 4px;
   }
 
-  
-  body .search {
+  body .myitemlist {
     align-items: center;
     justify-content: center;
+    margin-bottom: 10px;
   }
 
   body .list-item{
@@ -54,3 +50,12 @@
     margin-bottom: 10px;
 
   }
+  .list-item .name{
+    font-weight: bold;
+    font-size: 2.5em; 
+    margin-bottom: 2px;
+  }
+  .list-item address {
+    font-style: italic;
+  }
+  
