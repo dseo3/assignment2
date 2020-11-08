@@ -41,13 +41,16 @@
     flex-wrap: nowrap;
     border-radius: 4px;
   }
- 
-  #grad {
-    background-image: linear-gradient(orange, yellow);
-  }
-  
+
   
   body .search {
     align-items: center;
     justify-content: center;
+  }
+
+  body .list-item{
+    align-items: center;
+    background-image: linear-gradient(rgb(255, 174, 0), yellow);
+    margin-bottom: 10px;
+
   }

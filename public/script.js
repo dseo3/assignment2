@@ -29,7 +29,8 @@
           }
         };
         
-        document.getElementById('myItemList').appendChild(ul);
+        document.getElementById('list-item').appendChild(ul);
+        // changed for ul class in HTML
         
         this.results.forEach(function (item) {
             let name = document.createElement('li');
