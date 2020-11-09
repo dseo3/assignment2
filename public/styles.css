@@ -4,7 +4,7 @@
 
    body {
     background:rgb(44, 44, 249);
-    font-family: 'Grandstander';
+    font-family: 'Xanh Mono';
    }
 
    h1 {
@@ -13,20 +13,29 @@
     text-align: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: xxx-large;
     text-transform: capitalize;
   }
 
    .search {
-    width: 60%; 
+    width: 80%; 
     text-transform: capitalize;
-    margin-left: 100px;
+    margin-left: 130px;
    }
 
    ul li {
+     background-image: linear-gradient(rgb(255,174,8), yellow);
     border: 1px solid black;
     display: block;
     padding: 30px;
     margin: 50px;
   }
 
+  ul li .name {
+    font-style:normal;
+    font-size: x-large;
+  }
+
+  ul li .address_line_1 {
+    font-style: italic;
+  }
