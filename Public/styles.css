@@ -1,20 +1,13 @@
-@media only screen and (max-width: 2000px) {
-    
-}
-body {
-  background:rgb(44, 44, 249);
-
-}
-  .container {
-    display: block;
-    
-  }
+ @media only screen and (max-width: 2000px) {
   
-  .wrapper {
-    font-family: 'Grandstander';
-  }
+}
 
-  h1 {
+   body {
+    background:rgb(44, 44, 249);
+    font-family: 'Grandstander';
+   }
+
+   h1 {
     text-decoration: underline;
     color: white;
     text-align: center;
@@ -24,37 +17,16 @@ body {
     text-transform: capitalize;
   }
 
-  .search {
-    margin: 20px 50px;
-    padding: 0 20px;
-    display: flex;
-    border-radius: 4px;
-  }
-
-  .search-box{
-    width: 65%; 
+   .search {
+    width: 60%; 
     text-transform: capitalize;
-    margin-left: 140px;
+    margin-left: 100px;
+   }
+
+   ul li {
+    border: 1px solid black;
+    display: block;
+    padding: 30px;
+    margin: 50px;
   }
 
-  body .myitemlist {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  body .list-item{
-    background-image: linear-gradient(rgb(255, 174, 0), yellow);
-    margin-bottom: 10px;
-    
-
-  }
-  .list-item .name{
-    font-weight: bold;
-    font-size: 2.5em; 
-    margin-bottom: 2px;
-  }
-  .list-item address {
-    font-style: italic;
-  }
-  
