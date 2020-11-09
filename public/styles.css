@@ -1,7 +1,5 @@
- @media only screen and (max-width: 2000px) {
+ @media only screen and (max-width: 1600px) {
   
-}
-
    body {
     background:rgb(44, 44, 249);
     font-family: 'Xanh Mono';
@@ -39,3 +37,4 @@
   ul li .address_line_1 {
     font-style: italic;
   }
+}
