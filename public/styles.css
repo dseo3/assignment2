@@ -6,12 +6,8 @@ body {
 
 }
   .container {
-    justify-content:center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-   
+    display: block;
+    
   }
   
   .wrapper {
@@ -20,8 +16,6 @@ body {
     padding: 0 20px;
     min-height: 75px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: nowrap;
     border-radius: 4px;
   }
@@ -36,7 +30,8 @@ body {
   }
 
   .search-box{
-    width: 40%; 
+    display: block;
+    width: 80%; 
     text-transform: capitalize;
   }
 
@@ -47,7 +42,6 @@ body {
   }
 
   body .list-item{
-    align-items: center;
     background-image: linear-gradient(rgb(255, 174, 0), yellow);
     margin-bottom: 10px;
 
