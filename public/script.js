@@ -16,11 +16,13 @@
       .then((fromServer) => {
         const search = document.querySelector(".search").value;
         const ul = document.createElement("ul");
-                
+        
+        console.log(fromServer)
+
         this.results = [];
-        var div = document.getElementById('myItemList');
+        var div = document.getElementById('myitemlist');
         while(div.firstChild){
-            div.removeChild(div.firstChild);
+           div.removeChild(div.firstChild);
         }
        
         for(var i = 0; i < fromServer.length; i++){
@@ -29,7 +31,7 @@
           }
         };
         
-        document.getElementById('myItemList').appendChild(ul);
+        document.getElementById('myitemlist').appendChild(ul);
         
         this.results.forEach(function (item) {
             let name = document.createElement('li');
