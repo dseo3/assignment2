@@ -18,7 +18,7 @@
         const ul = document.createElement("ul");
                 
         this.results = [];
-        var div = document.getElementById('myItemList');
+        var div = document.getElementById('myitemlist');
         while(div.firstChild){
             div.removeChild(div.firstChild);
         }

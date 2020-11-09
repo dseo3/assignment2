@@ -12,27 +12,29 @@ body {
   
   .wrapper {
     font-family: 'Grandstander';
-    margin: 20px 50px;
-    padding: 0 20px;
-    min-height: 75px;
-    display: flex;
-    flex-wrap: nowrap;
-    border-radius: 4px;
   }
 
   h1 {
     text-decoration: underline;
     color: white;
-    align-items: center;
+    text-align: center;
+    justify-content: center;
     font-weight: bold;
     font-size: 1.5em;
     text-transform: capitalize;
   }
 
+  .search {
+    margin: 20px 50px;
+    padding: 0 20px;
+    display: flex;
+    border-radius: 4px;
+  }
+
   .search-box{
-    display: block;
-    width: 80%; 
+    width: 65%; 
     text-transform: capitalize;
+    margin-left: 140px;
   }
 
   body .myitemlist {
@@ -44,6 +46,7 @@ body {
   body .list-item{
     background-image: linear-gradient(rgb(255, 174, 0), yellow);
     margin-bottom: 10px;
+    
 
   }
   .list-item .name{
