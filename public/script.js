@@ -36,7 +36,7 @@
         this.results.forEach(function (item) {
             let name = document.createElement('li');
             ul.appendChild(name);
-            name.innerHTML += item.name + "<br />" + item.category + "<br />" + item.address_line_1 + "<br />" + item.city + "<br />" + item.zip;
+            name.innerHTML += "<b>" + item.name + "</b>" + "<br />" + item.category + "<br />" + "<i>" + item.address_line_1 + "</i>" + "<br />" + item.city + "<br />" + item.zip;
         });
   })
   .catch((err) => console.log(err));
