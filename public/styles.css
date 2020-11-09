@@ -11,7 +11,7 @@ body {
   }
   
   .wrapper {
-    font-family: 'Grandstander';
+    font-family: 'Xahn Mono';
   }
 
   h1 {
@@ -20,7 +20,7 @@ body {
     text-align: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: xxx-large;
     text-transform: capitalize;
   }
 
@@ -37,24 +37,21 @@ body {
     margin-left: 140px;
   }
 
-  body .myitemlist {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  body .list-item{
+  ul li {
     background-image: linear-gradient(rgb(255, 174, 0), yellow);
-    margin-bottom: 10px;
-    
+    border: 1px solid black;
+    display: block;
+    padding: 30px;
+    margin: 50px;
+  }
+
+  ul li .name {
+    font-style: normal;
+    font-size: x-large;
 
   }
-  .list-item .name{
-    font-weight: bold;
-    font-size: 2.5em; 
-    margin-bottom: 2px;
-  }
-  .list-item address {
+
+  ul li .address_line_1 {
     font-style: italic;
   }
   
